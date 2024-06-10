@@ -4,19 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pasar Motor</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo-only.svg"
+      type="image/x-icon"
+    />
 
     <link rel="stylesheet" href="./bootstrap/5.3.3/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/custom.css" />
   </head>
-  <body class="bg-black">
-    <header>header</header>
+  <body class="">
+    <!-- Header section -->
+    <header
+      class="position-sticky top-0 d-flex align-items-center"
+      style="height: 4rem"
+    >
+      <div class="container">
+        <div class="row align-items-center text-center g-2">
+          <div class="col-2">
+            <a href="/">
+              <svg class="icon" style="--size: 2.5em">
+                <use xlink:href="./assets/img/sprite.svg#logo-with-text"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="col">
+            <form action="" method="get">
+              <input
+                type="search"
+                name="search"
+                id="search"
+                class="form-control"
+                value=""
+                placeholder="cari di sini"
+              />
+            </form>
+          </div>
+          <div class="col-2">
+            <svg class="icon">
+              <use xlink:href="./assets/img/sprite.svg#menu"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
 
+    <!-- Main content -->
     <main>
       <div class="container">
         <h1>Hello World</h1>
+        <svg class="icon">
+          <use xlink:href="./assets/img/sprite.svg#logo-only"></use>
+        </svg>
+        <svg class="icon">
+          <use xlink:href="./assets/img/sprite.svg#sort"></use>
+        </svg>
+        <svg class="icon">
+          <use xlink:href="./assets/img/sprite.svg#logo-with-text"></use>
+        </svg>
       </div>
     </main>
 
-    <nav>navigation</nav>
+    <!-- Navigation section-->
+    <nav
+      class="position-fixed start-0 end-0 bottom-0 border-top"
+      style="height: 4rem"
+    >
+      <div class="container h-100">
+        <!-- Add button -->
+        <div class="position-fixed start-50 translate-middle">
+          <button class="btn rounded-circle p-1 text-warning">
+            <svg class="icon" style="--size: 4rem">
+              <use xlink:href="./assets/img/sprite.svg#plus"></use>
+            </svg>
+          </button>
+        </div>
+        <!-- Nav button -->
+        <div class="h-100 row align-items-center">
+          <div class="col">
+            <a href="/" class="d-flex flex-column text-center">
+              <div>
+                <svg class="icon">
+                  <use xlink:href="./assets/img/sprite.svg#home"></use>
+                </svg>
+              </div>
+              <span>Beranda</span>
+            </a>
+          </div>
+          <div class="col-3"><!-- Empty --></div>
+          <div class="col">
+            <a href="" class="d-flex flex-column text-center">
+              <div>
+                <svg class="icon">
+                  <use xlink:href="./assets/img/sprite.svg#help"></use>
+                </svg>
+              </div>
+              <span>Bantuan</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
   </body>
 </html>

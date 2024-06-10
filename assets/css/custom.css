@@ -32,4 +32,12 @@
 :root {
   --bs-body-font-family: "Kollektif", system-ui, -apple-system, "Segoe UI",
     sans-serif;
+
+  --base-color: #faf81c;
+}
+
+.icon {
+  --size: 1.5em;
+  width: var(--size, 1.5em);
+  height: var(--size, 1.5em);
 }
