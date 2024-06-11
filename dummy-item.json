@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Honda vario 125 iss",
+    "img": "vario-125",
+    "price": 20500000
+  },
+  {
+    "id": 2,
+    "title": "Honda vario 150 iss",
+    "img": "vario-150",
+    "price": 25500000
+  }
+]

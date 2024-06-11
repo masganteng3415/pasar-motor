@@ -10,13 +10,18 @@
       type="image/x-icon"
     />
 
-    <link rel="stylesheet" href="./bootstrap/5.3.3/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./tools/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/custom.css" />
+
+    <script type="module" defer src="./assets/js/script.js"></script>
   </head>
   <body class="">
     <!-- Header section -->
     <header
-      class="position-sticky top-0 d-flex align-items-center"
+      class="position-sticky top-0 d-flex align-items-center bg-white z-1"
       style="height: 4rem"
     >
       <div class="container">
@@ -50,24 +55,53 @@
     </header>
 
     <!-- Main content -->
-    <main>
+    <main class="position-relative z-0">
       <div class="container">
-        <h1>Hello World</h1>
-        <svg class="icon">
-          <use xlink:href="./assets/img/sprite.svg#logo-only"></use>
-        </svg>
-        <svg class="icon">
-          <use xlink:href="./assets/img/sprite.svg#sort"></use>
-        </svg>
-        <svg class="icon">
-          <use xlink:href="./assets/img/sprite.svg#logo-with-text"></use>
-        </svg>
+        <section>slider</section>
+        <section>
+          <header class="row">
+            <div class="col">
+              <button class="btn" id="filter-item">
+                <svg class="icon">
+                  <use xlink:href="./assets/img/sprite.svg#filter"></use>
+                </svg>
+                <span class="align-text-top">Filter</span>
+              </button>
+            </div>
+            <div class="col text-end">
+              <button class="btn" id="sort-item">
+                <svg class="icon">
+                  <use xlink:href="./assets/img/sprite.svg#sort"></use>
+                </svg>
+                <span class="align-text-top">Urutkan</span>
+              </button>
+            </div>
+          </header>
+
+          <article class="row" id="list-items">
+            <!-- <div class="col-6">
+              <a href="">
+                <figure class="card">
+                  <img
+                    src="./assets/dummy/vario-125.avif"
+                    class="card-img-top"
+                    alt=""
+                  />
+                  <figcaption class="card-body">
+                    <p class="card-title">Honda vario 125</p>
+                    <span>12.500.000</span>
+                  </figcaption>
+                </figure>
+              </a>
+            </div> -->
+          </article>
+        </section>
       </div>
     </main>
 
     <!-- Navigation section-->
     <nav
-      class="position-fixed start-0 end-0 bottom-0 border-top"
+      class="position-fixed start-0 end-0 bottom-0 border-top bg-white z-1"
       style="height: 4rem"
     >
       <div class="container h-100">
@@ -79,6 +113,7 @@
             </svg>
           </button>
         </div>
+
         <!-- Nav button -->
         <div class="h-100 row align-items-center">
           <div class="col">
