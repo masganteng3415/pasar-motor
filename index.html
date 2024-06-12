@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/tools/slider/glide.theme.min.css" />
     <link rel="stylesheet" href="/assets/css/custom.css" />
 
+    <script src="/tools/bootstrap/5.3.3/js/bootstrap.min.js" defer></script>
     <script src="/assets/js/glide.js" defer></script>
     <script type="module" defer src="/assets/js/script.js"></script>
   </head>
@@ -49,9 +50,67 @@
             </form>
           </div>
           <div class="col-2">
-            <svg class="icon">
-              <use xlink:href="/assets/img/sprite.svg#menu"></use>
-            </svg>
+            <div class="dropdown">
+              <button
+                class="btn"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <svg class="icon">
+                  <use xlink:href="/assets/img/sprite.svg#menu"></use>
+                </svg>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="mb-1">
+                  <a class="dropdown-item" href="">
+                    <div class="row">
+                      <div class="col">
+                        <svg class="icon me-2" style="--size: 1em">
+                          <use xlink:href="/assets/img/sprite.svg#login"></use>
+                        </svg>
+                        <span class="align-text-top">Masuk / Daftar</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a class="dropdown-item" href="">
+                    <div class="row">
+                      <div class="col">
+                        <svg class="icon me-2" style="--size: 1em">
+                          <use xlink:href="/assets/img/sprite.svg#plus"></use>
+                        </svg>
+                        <span class="align-text-top">Jual</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a class="dropdown-item" href="">
+                    <div class="row">
+                      <div class="col">
+                        <svg class="icon me-2" style="--size: 1em">
+                          <use xlink:href="/assets/img/sprite.svg#help"></use>
+                        </svg>
+                        <span class="align-text-top">Bantuan</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a class="dropdown-item" href="">
+                    <div class="row">
+                      <div class="col">
+                        <svg class="icon me-2" style="--size: 1em">
+                          <use xlink:href="/assets/img/sprite.svg#book"></use>
+                        </svg>
+                        <span class="align-text-top">Artikel</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -60,8 +119,8 @@
     <!-- Main content -->
     <main class="position-relative pb-5 mb-4 z-0">
       <div class="container">
+        <!-- slider -->
         <section class="mb-3">
-          <!-- slider -->
           <div class="glide">
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides">
@@ -81,13 +140,17 @@
                 class="glide__arrow glide__arrow--left"
                 data-glide-dir="<"
               >
-                prev
+                <svg class="icon">
+                  <use xlink:href="/assets/img/sprite.svg#chevron-left"></use>
+                </svg>
               </button>
               <button
                 class="glide__arrow glide__arrow--right"
                 data-glide-dir=">"
               >
-                next
+                <svg class="icon">
+                  <use xlink:href="/assets/img/sprite.svg#chevron-right"></use>
+                </svg>
               </button>
             </div>
             <div class="glide__bullets" data-glide-el="controls[nav]">
@@ -101,7 +164,12 @@
         <section>
           <header class="row mb-2">
             <div class="col">
-              <button class="btn" id="filter-item">
+              <button
+                class="btn"
+                id="filter-item"
+                data-bs-toggle="modal"
+                data-bs-target="#filterModal"
+              >
                 <svg class="icon">
                   <use xlink:href="/assets/img/sprite.svg#filter"></use>
                 </svg>
@@ -109,12 +177,49 @@
               </button>
             </div>
             <div class="col text-end">
-              <button class="btn" id="sort-item">
-                <svg class="icon">
-                  <use xlink:href="/assets/img/sprite.svg#sort"></use>
-                </svg>
-                <span class="align-text-top">Urutkan</span>
-              </button>
+              <div class="dropdown">
+                <button
+                  class="btn"
+                  id="sort-item"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <svg class="icon">
+                    <use xlink:href="/assets/img/sprite.svg#sort"></use>
+                  </svg>
+                  <span class="align-text-top">Urutkan</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div class="row">
+                      <div class="col">
+                        <button class="btn w-100">Terbaru</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row">
+                      <div class="col">
+                        <button class="btn w-100">Terlama</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row">
+                      <div class="col">
+                        <button class="btn w-100">Termurah</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row">
+                      <div class="col">
+                        <button class="btn w-100">Termahal</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </header>
 
@@ -130,24 +235,28 @@
     >
       <div class="container h-100">
         <!-- Add button -->
-        <div class="position-absolute start-50 translate-middle">
-          <button class="btn rounded-circle p-1 text-warning">
-            <svg class="icon" style="--size: 4rem">
+        <div
+          class="position-absolute start-50 translate-middle"
+          style="top: 0.75em"
+        >
+          <button class="btn rounded-circle p-1">
+            <svg class="icon text-warning" style="--size: 4rem">
               <use xlink:href="/assets/img/sprite.svg#plus"></use>
             </svg>
+            <div>Jual</div>
           </button>
         </div>
 
         <!-- Nav button -->
         <div class="h-100 row align-items-center">
           <div class="col">
-            <a href="/" class="d-flex flex-column text-center">
+            <a href="/pages/login.html" class="d-flex flex-column text-center">
               <div>
                 <svg class="icon">
-                  <use xlink:href="/assets/img/sprite.svg#home"></use>
+                  <use xlink:href="/assets/img/sprite.svg#login"></use>
                 </svg>
               </div>
-              <span>Beranda</span>
+              <span>Log In</span>
             </a>
           </div>
           <div class="col-3"><!-- Empty --></div>
@@ -165,6 +274,41 @@
       </div>
     </nav>
 
+    <!-- Filter modal -->
+    <div
+      class="modal fade"
+      id="filterModal"
+      tabindex="-1"
+      aria-labelledby="filterModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="filterModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/popper.min.js"></script>
     <script src="/tools/slider/glide.min.js"></script>
   </body>
 </html>
