@@ -10,5 +10,23 @@
     "title": "Honda vario 150 iss",
     "img": "vario-150",
     "price": 25500000
+  },
+  {
+    "id": 3,
+    "title": "Honda beat",
+    "img": "beat",
+    "price": 15200000
+  },
+  {
+    "id": 4,
+    "title": "Honda scoopy sporty",
+    "img": "scoopy-sporty-grey",
+    "price": 17100000
+  },
+  {
+    "id": 5,
+    "title": "Honda supra",
+    "img": "supra",
+    "price": 22000000
   }
 ]
