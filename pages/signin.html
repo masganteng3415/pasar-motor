@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pasar Motor</title>
+    <link
+      rel="shortcut icon"
+      href="/assets/img/logo-only.svg"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/tools/bootstrap/5.3.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/custom.css" />
+  </head>
+  <body class="bg-theme">
+    <main class="min-vh-100 d-flex">
+      <div class="container my-auto pb-5">
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <div class="row text-center">
+              <div class="col">
+                <svg class="icon" style="--size: 10em">
+                  <use xlink:href="/assets/img/sprite.svg#logo-with-text"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="row">
+              <div class="bg-white pt-4 pb-4">
+                <form action="/" method="get" class="">
+                  <div class="mb-3">
+                    <label for="username">Username</label>
+                    <input
+                      type="text"
+                      name="username"
+                      id="username"
+                      class="form-control"
+                      placeholder="masukkan username"
+                      value=""
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="password">Password</label>
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      class="form-control"
+                      placeholder="masukkan password"
+                      value=""
+                    />
+                  </div>
+                  <div id="error-sign in" class="d-none form-text">
+                    <span class="text-danger">username tidak ditemukan</span>
+                    <span class="text-danger">
+                      username dan password tidak seuai
+                    </span>
+                  </div>
+                  <button class="btn btn-primary w-100 mt-3" type="submit">
+                    Masuk
+                  </button>
+                </form>
+              </div>
+              <p class="text-center mt-3">
+                Tidak punya akun? <a href="./signup.html">Daftar di sini</a>
+              </p>
+            </div>
+            <div class="text-center">
+              <p>atau</p>
+              <button class="btn bg-white w-100" type="button">
+                <svg class="icon" style="--size: 1.25em">
+                  <use xlink:href="/assets/img/sprite.svg#mail"></use>
+                </svg>
+                <span class="align-middle ms-2">Masuk via gmail</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
