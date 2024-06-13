@@ -14,13 +14,9 @@
       rel="stylesheet"
       href="/tools/bootstrap/5.3.3/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="/tools/slider/glide.core.min.css" />
-    <link rel="stylesheet" href="/tools/slider/glide.theme.min.css" />
     <link rel="stylesheet" href="/assets/css/custom.css" />
 
     <script src="/tools/bootstrap/5.3.3/js/bootstrap.min.js" defer></script>
-    <script src="/assets/js/glide.js" defer></script>
-    <script type="module" defer src="/assets/js/fetchItems.js"></script>
   </head>
   <body class="">
     <!-- Header section -->
@@ -117,114 +113,83 @@
     </header>
 
     <!-- Main content -->
-    <main class="position-relative pb-5 mb-4 z-0">
+    <main class="position-relative pb-5 mt-2 mb-4 z-0">
       <div class="container">
-        <!-- slider -->
-        <section class="mb-3">
-          <div class="glide">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides">
-                <li class="glide__slide">
-                  <img src="/assets/dummy/beat.avif" class="img-fluid" />
-                </li>
-                <li class="glide__slide">
-                  <img src="/assets/dummy/supra.avif" class="img-fluid" />
-                </li>
-                <li class="glide__slide">
-                  <img src="/assets/dummy/vario-125.avif" class="img-fluid" />
-                </li>
-              </ul>
-            </div>
-            <div class="glide__arrows" data-glide-el="controls">
-              <button
-                class="glide__arrow glide__arrow--left"
-                data-glide-dir="<"
-              >
-                <svg class="icon">
-                  <use xlink:href="/assets/img/sprite.svg#chevron-left"></use>
-                </svg>
-              </button>
-              <button
-                class="glide__arrow glide__arrow--right"
-                data-glide-dir=">"
-              >
-                <svg class="icon">
-                  <use xlink:href="/assets/img/sprite.svg#chevron-right"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="glide__bullets" data-glide-el="controls[nav]">
-              <button class="glide__bullet" data-glide-dir="=0"></button>
-              <button class="glide__bullet" data-glide-dir="=1"></button>
-              <button class="glide__bullet" data-glide-dir="=2"></button>
-            </div>
+        <div class="row">
+          <div class="col">
+            <h3>Favorit</h3>
           </div>
-        </section>
-        <!-- item lists -->
-        <section>
-          <header class="row mb-2">
+        </div>
+        <ul type="none" class="p-0">
+          <li class="row">
             <div class="col">
-              <button
-                class="btn"
-                id="filter-item"
-                data-bs-toggle="modal"
-                data-bs-target="#filterModal"
-              >
-                <svg class="icon">
-                  <use xlink:href="/assets/img/sprite.svg#filter"></use>
-                </svg>
-                <span class="align-text-top">Filter</span>
-              </button>
+              <a href="">
+                <figure class="card">
+                  <div class="row g-0">
+                    <div class="col-4">
+                      <img
+                        src="/assets/dummy/beat.avif"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </div>
+                    <div class="col">
+                      <figcaption class="card-body p-2">
+                        <div class="small d-flex justify-content-between">
+                          <span class="small text-secondary">2021</span>
+                          <span class="small">Rp 15.000.000</span>
+                        </div>
+                        <div>Honda beat</div>
+                        <div class="small">
+                          <svg class="icon" style="--size: 1em">
+                            <use xlink:href="/assets/img/sprite.svg#pin"></use>
+                          </svg>
+                          <span class="align-middle small text-muted">
+                            Pedurungan, Semarang
+                          </span>
+                        </div>
+                      </figcaption>
+                    </div>
+                  </div>
+                </figure>
+              </a>
             </div>
-            <div class="col text-end">
-              <div class="dropdown">
-                <button
-                  class="btn"
-                  id="sort-item"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <svg class="icon">
-                    <use xlink:href="/assets/img/sprite.svg#sort"></use>
-                  </svg>
-                  <span class="align-text-top">Urutkan</span>
-                </button>
-                <ul class="dropdown-menu">
-                  <li>
-                    <div class="row">
-                      <div class="col">
-                        <button class="btn w-100">Terbaru</button>
-                      </div>
+          </li>
+          <li class="row">
+            <div class="col">
+              <a href="">
+                <figure class="card">
+                  <div class="row g-0">
+                    <div class="col-4">
+                      <img
+                        src="/assets/dummy/supra.avif"
+                        alt=""
+                        class="img-fluid"
+                      />
                     </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col">
-                        <button class="btn w-100">Terlama</button>
-                      </div>
+                    <div class="col">
+                      <figcaption class="card-body p-2">
+                        <div class="small d-flex justify-content-between">
+                          <span class="small text-secondary">2022</span>
+                          <span class="small">Rp 17.600.000</span>
+                        </div>
+                        <div>Honda supra</div>
+                        <div class="small">
+                          <svg class="icon" style="--size: 1em">
+                            <use xlink:href="/assets/img/sprite.svg#pin"></use>
+                          </svg>
+                          <span class="align-middle small text-muted">
+                            Gayamsari, Semarang
+                          </span>
+                        </div>
+                      </figcaption>
                     </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col">
-                        <button class="btn w-100">Termurah</button>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col">
-                        <button class="btn w-100">Termahal</button>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+                  </div>
+                </figure>
+              </a>
             </div>
-          </header>
-
-          <article class="row row-cols-2 g-2" id="list-items"></article>
-        </section>
+          </li>
+        </ul>
       </div>
     </main>
 
@@ -253,62 +218,27 @@
             <a href="/pages/login.html" class="d-flex flex-column text-center">
               <div>
                 <svg class="icon">
-                  <use xlink:href="/assets/img/sprite.svg#login"></use>
+                  <use xlink:href="/assets/img/sprite.svg#home"></use>
                 </svg>
               </div>
-              <span>Log In</span>
+              <span>Beranda</span>
             </a>
           </div>
           <div class="col-3"><!-- Empty --></div>
           <div class="col">
-            <a href="/pages/help.html" class="d-flex flex-column text-center">
+            <a href="" class="d-flex flex-column text-center">
               <div>
                 <svg class="icon">
-                  <use xlink:href="/assets/img/sprite.svg#help"></use>
+                  <use xlink:href="/assets/img/sprite.svg#notebook"></use>
                 </svg>
               </div>
-              <span>Bantuan</span>
+              <span>Iklan Saya</span>
             </a>
           </div>
         </div>
       </div>
     </nav>
 
-    <!-- Filter modal -->
-    <div
-      class="modal fade"
-      id="filterModal"
-      tabindex="-1"
-      aria-labelledby="filterModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="filterModalLabel">Modal title</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <script src="/assets/js/popper.min.js"></script>
-    <script src="/tools/slider/glide.min.js"></script>
   </body>
 </html>
